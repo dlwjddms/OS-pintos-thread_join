@@ -4,6 +4,30 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+<C-@><C-@>c	cscope_maps.vim	/^    nmap <C-@><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@><C-@>d	cscope_maps.vim	/^    nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@><C-@>e	cscope_maps.vim	/^    nmap <C-@><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@><C-@>f	cscope_maps.vim	/^    nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>	$/;"	m
+<C-@><C-@>g	cscope_maps.vim	/^    nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@><C-@>i	cscope_maps.vim	/^    nmap <C-@><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>	$/;"	m
+<C-@><C-@>s	cscope_maps.vim	/^    nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@><C-@>t	cscope_maps.vim	/^    nmap <C-@><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@>c	cscope_maps.vim	/^    nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>	$/;"	m
+<C-@>d	cscope_maps.vim	/^    nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>	$/;"	m
+<C-@>e	cscope_maps.vim	/^    nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>	$/;"	m
+<C-@>f	cscope_maps.vim	/^    nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>	$/;"	m
+<C-@>g	cscope_maps.vim	/^    nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>	$/;"	m
+<C-@>i	cscope_maps.vim	/^    nmap <C-@>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>	$/;"	m
+<C-@>s	cscope_maps.vim	/^    nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>	$/;"	m
+<C-@>t	cscope_maps.vim	/^    nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>	$/;"	m
+<C-\>c	cscope_maps.vim	/^    nmap <C-\\>c :cs find c <C-R>=expand("<cword>")<CR><CR>	$/;"	m
+<C-\>d	cscope_maps.vim	/^    nmap <C-\\>d :cs find d <C-R>=expand("<cword>")<CR><CR>	$/;"	m
+<C-\>e	cscope_maps.vim	/^    nmap <C-\\>e :cs find e <C-R>=expand("<cword>")<CR><CR>	$/;"	m
+<C-\>f	cscope_maps.vim	/^    nmap <C-\\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	$/;"	m
+<C-\>g	cscope_maps.vim	/^    nmap <C-\\>g :cs find g <C-R>=expand("<cword>")<CR><CR>	$/;"	m
+<C-\>i	cscope_maps.vim	/^    nmap <C-\\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>$/;"	m
+<C-\>s	cscope_maps.vim	/^    nmap <C-\\>s :cs find s <C-R>=expand("<cword>")<CR><CR>	$/;"	m
+<C-\>t	cscope_maps.vim	/^    nmap <C-\\>t :cs find t <C-R>=expand("<cword>")<CR><CR>	$/;"	m
 ALLOCATOR_BF	palloc.h	/^    ALLOCATOR_BF,                \/* 2: Best Fit  *\/$/;"	e	enum:palloc_allocator
 ALLOCATOR_BUDDY	palloc.h	/^    ALLOCATOR_BUDDY              \/* 3: Buddy System  *\/$/;"	e	enum:palloc_allocator
 ALLOCATOR_FF	palloc.h	/^    ALLOCATOR_FF = 0,            \/* 0: First Fit (default) *\/$/;"	e	enum:palloc_allocator
@@ -48,9 +72,9 @@ PIC0_CTRL	interrupt.c	16;"	d	file:
 PIC0_DATA	interrupt.c	17;"	d	file:
 PIC1_CTRL	interrupt.c	18;"	d	file:
 PIC1_DATA	interrupt.c	19;"	d	file:
-PRI_DEFAULT	thread.h	24;"	d
-PRI_MAX	thread.h	25;"	d
-PRI_MIN	thread.h	23;"	d
+PRI_DEFAULT	thread.h	25;"	d
+PRI_MAX	thread.h	26;"	d
+PRI_MIN	thread.h	24;"	d
 PTBITS	pte.h	22;"	d
 PTE_A	pte.h	67;"	d
 PTE_ADDR	pte.h	62;"	d
@@ -90,8 +114,8 @@ THREAD_DYING	thread.h	/^    THREAD_DYING        \/* About to be destroyed. *\/$/
 THREAD_MAGIC	thread.c	21;"	d	file:
 THREAD_READY	thread.h	/^    THREAD_READY,       \/* Not running but ready to run. *\/$/;"	e	enum:thread_status
 THREAD_RUNNING	thread.h	/^    THREAD_RUNNING,     \/* Running thread. *\/$/;"	e	enum:thread_status
-TID_ERROR	thread.h	20;"	d
-TIME_SLICE	thread.c	58;"	d	file:
+TID_ERROR	thread.h	21;"	d
+TIME_SLICE	thread.c	60;"	d	file:
 _end	build/threads/kernel.lds.s	/^  _end = .;$/;"	d
 _end	kernel.lds.S	/^  _end = .;$/;"	d
 _end_bss	build/threads/kernel.lds.s	/^  _end_bss = .;$/;"	d
@@ -105,6 +129,7 @@ _start	kernel.lds.S	/^  _start = LOADER_PHYS_BASE + LOADER_KERN_BASE;$/;"	d
 _start_bss	build/threads/kernel.lds.s	/^  _start_bss = .;$/;"	d
 _start_bss	kernel.lds.S	/^  _start_bss = .;$/;"	d
 all_list	thread.c	/^static struct list all_list;$/;"	v	typeref:struct:list	file:
+all_lock	thread.c	/^static struct lock all_lock;$/;"	v	typeref:struct:lock	file:
 allelem	thread.h	/^    struct list_elem allelem;           \/* List element for all threads list. *\/$/;"	m	struct:thread	typeref:struct:thread::list_elem
 alloc_frame	thread.c	/^alloc_frame (struct thread *t, size_t size) $/;"	f	file:
 allocate_tid	thread.c	/^allocate_tid (void) $/;"	f	file:
@@ -121,6 +146,9 @@ blocks_per_arena	malloc.c	/^    size_t blocks_per_arena;    \/* Number of blocks
 bss_init	init.c	/^bss_init (void)$/;"	f	file:
 calloc	malloc.c	/^calloc (size_t a, size_t b) $/;"	f
 check_partition	loader.S	/^check_partition:$/;"	l
+child_elem	thread.h	/^    struct list_elem child_elem;	\/* List element for child list *\/$/;"	m	struct:thread	typeref:struct:thread::list_elem
+children	thread.h	/^    struct list children;			\/* List of this thread's children *\/$/;"	m	struct:thread	typeref:struct:thread::list
+children_remove	thread.c	/^void children_remove(struct thread *thread){$/;"	f
 cond_broadcast	synch.c	/^cond_broadcast (struct condition *cond, struct lock *lock) $/;"	f
 cond_init	synch.c	/^cond_init (struct condition *cond)$/;"	f
 cond_signal	synch.c	/^cond_signal (struct condition *cond, struct lock *lock UNUSED) $/;"	f
@@ -156,8 +184,11 @@ esi	interrupt.h	/^    uint32_t esi;               \/* Saved ESI. *\/$/;"	m	struc
 esi	switch.h	/^    uint32_t esi;               \/*  4: Saved %esi. *\/$/;"	m	struct:switch_threads_frame
 esp	interrupt.h	/^    void *esp;                  \/* Saved stack pointer. *\/$/;"	m	struct:intr_frame
 esp_dummy	interrupt.h	/^    uint32_t esp_dummy;         \/* Not used. *\/$/;"	m	struct:intr_frame
+exit	thread.h	/^    int exit;$/;"	m	struct:thread
+exit_lock	thread.h	/^    struct lock exit_lock;		\/* Lock used for modifing childern list *\/ $/;"	m	struct:thread	typeref:struct:thread::lock
 filesys_SRC	build/Makefile	/^filesys_SRC  = filesys\/filesys.c	# Filesystem core.$/;"	m
 filesys_bdev_name	init.c	/^static const char *filesys_bdev_name;$/;"	v	file:
+flag	thread.h	/^    bool flag;  			\/* flag for block in join situation *\/$/;"	m	struct:thread
 format_filesys	init.c	/^static bool format_filesys;$/;"	v	file:
 frame_pointer	interrupt.h	/^    void *frame_pointer;        \/* Saved EBP (frame pointer). *\/$/;"	m	struct:intr_frame
 free	malloc.c	/^free (void *p) $/;"	f
@@ -168,6 +199,7 @@ fs	interrupt.h	/^    uint16_t fs, :16;           \/* Saved FS segment register. 
 function	thread.c	/^    thread_func *function;      \/* Function to call. *\/$/;"	m	struct:kernel_thread_frame	file:
 gdt	start.S	/^gdt:$/;"	l
 gdtdesc	start.S	/^gdtdesc:$/;"	l
+get_child	thread.c	/^struct thread* get_child(tid_t tid){$/;"	f
 get_next_tick_to_wakeup	thread.c	/^get_next_tick_to_wakeup (void)$/;"	f
 gs	interrupt.h	/^    uint16_t gs, :16;           \/* Saved GS segment register. *\/$/;"	m	struct:intr_frame
 holder	synch.h	/^    struct thread *holder;      \/* Thread holding lock (for debugging). *\/$/;"	m	struct:lock	typeref:struct:lock::thread
@@ -217,6 +249,7 @@ kernel_thread	thread.c	/^kernel_thread (thread_func *function, void *aux) $/;"	f
 kernel_thread_frame	thread.c	/^struct kernel_thread_frame $/;"	s	file:
 kernel_ticks	thread.c	/^static long long kernel_ticks;  \/* # of timer ticks in kernel threads. *\/$/;"	v	file:
 lib_SRC	build/Makefile	/^lib_SRC  = lib\/debug.c			# Debug helpers.$/;"	m
+list_lock	thread.h	/^    struct lock list_lock;		\/* Lock used for modifing childern list *\/ $/;"	m	struct:thread	typeref:struct:thread::lock
 load_kernel	loader.S	/^load_kernel:$/;"	l
 locate_block_device	init.c	/^locate_block_device (enum block_type role, const char *name)$/;"	f	file:
 locate_block_devices	init.c	/^locate_block_devices (void)$/;"	f	file:
@@ -265,6 +298,7 @@ palloc_get_page	palloc.c	/^palloc_get_page (enum palloc_flags flags) $/;"	f
 palloc_get_status	palloc.c	/^palloc_get_status (enum palloc_flags flags)$/;"	f
 palloc_init	palloc.c	/^palloc_init (size_t user_page_limit)$/;"	f
 pallocator	palloc.c	/^enum palloc_allocator pallocator = 0;$/;"	v	typeref:enum:palloc_allocator
+parent	thread.h	/^    struct thread* parent;		\/* Pointer pointing to its parent thread *\/$/;"	m	struct:thread	typeref:struct:thread::thread
 parse_options	init.c	/^static char **parse_options (char **argv)$/;"	f	file:
 pd_no	pte.h	/^static inline uintptr_t pd_no (const void *va) {$/;"	f
 pde_create	pte.h	/^static inline uint32_t pde_create (uint32_t *pt) {$/;"	f
@@ -292,6 +326,7 @@ read_sector	loader.S	/^read_sector:$/;"	l
 ready_list	thread.c	/^static struct list ready_list;$/;"	v	typeref:struct:list	file:
 realloc	malloc.c	/^realloc (void *old_block, size_t new_size) $/;"	f
 register_handler	interrupt.c	/^register_handler (uint8_t vec_no, int dpl, enum intr_level level,$/;"	f	file:
+remove_from_parent	thread.c	/^void remove_from_parent(struct thread *thread){$/;"	f
 run_actions	init.c	/^run_actions (char **argv)$/;"	f	file:
 run_task	init.c	/^run_task (char **argv)$/;"	f	file:
 running_thread	thread.c	/^running_thread (void) $/;"	f
@@ -331,6 +366,7 @@ thread_get_nice	thread.c	/^thread_get_nice (void) $/;"	f
 thread_get_priority	thread.c	/^thread_get_priority (void) $/;"	f
 thread_get_recent_cpu	thread.c	/^thread_get_recent_cpu (void) $/;"	f
 thread_init	thread.c	/^thread_init (void) $/;"	f
+thread_join	thread.c	/^void thread_join(tid_t tid){$/;"	f
 thread_name	thread.c	/^thread_name (void) $/;"	f
 thread_print_stats	thread.c	/^thread_print_stats (void) $/;"	f
 thread_schedule_tail	thread.c	/^thread_schedule_tail (struct thread *prev)$/;"	f

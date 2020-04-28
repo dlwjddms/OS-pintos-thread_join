@@ -93,7 +93,6 @@ struct thread* get_child(tid_t tid){
 		else
 			ct = NULL ;
         }
-// unlock
 	return ct;
 
 }
@@ -104,11 +103,11 @@ struct thread* get_child(tid_t tid){
  *  with input tid is gone
  */
 void thread_join(tid_t tid){
-	struct thread *pt = running_thread();
 	enum intr_level old_level;
 
 	old_level = intr_disable ();
 
+	struct thread *pt = running_thread();
 	 while(get_child(tid) !=NULL){
 		/* this thread will be unblocked
 		 * when the child thread dies */
@@ -122,14 +121,15 @@ void thread_join(tid_t tid){
 
 	return ;
 }
-
+/* if input thread has parent thread remove himself from his parent children list*/
 void remove_from_parent(struct thread *thread){
 
 	if(thread->parent == NULL)
 		return ;
 	struct thread *pt = thread->parent; 
 	struct thread* ct;
-	for(struct list_elem *e=list_begin(&pt->children); e != list_end(&pt->children);e=list_next(e) ){
+	for(struct list_elem *e=list_begin(&pt->children); 
+				e != list_end(&pt->children);e=list_next(e) ){
 		ct = list_entry (e, struct thread, child_elem);
         
 		if(ct != NULL && ct->tid == thread->tid){
@@ -142,6 +142,8 @@ void remove_from_parent(struct thread *thread){
 
 	return ;
 }
+
+/* If input thread has children remove them by force */
 void children_remove(struct thread *thread){
 
 	if(list_empty(&thread->children)){
@@ -154,13 +156,15 @@ void children_remove(struct thread *thread){
         
 		if(ct != NULL){
 			lock_acquire(&all_lock);
+			/* Remove child element from every thread list*/
   			list_remove (&ct->allelem);
 			lock_release(&all_lock);
 			lock_acquire(&ct->parent->list_lock);
+			/* Remove child element from children thread list*/
 			list_remove (&ct->child_elem);
 			lock_release(&ct->parent->list_lock);
+			/*Set child thread status == THREAD_DYING */
 			ct->status = THREAD_DYING;
-//		        palloc_free_page (ct);	
 		}
 	}
 
@@ -452,24 +456,30 @@ thread_exit (void)
 
 //jjeong  
    struct thread* t = thread_current();
-	printf("%s : %s \n",t->name,thread_name());
+   /* Check whether other thread is destroying this thread*/
    lock_acquire(&t->exit_lock);
 	 t->exit--;
    lock_release(&t->exit_lock);
-
+  /* If exit is negative number,
+   *  this thread will be die soon just return */
     if(t->exit<0)
 	return ;
-
+   /* If your parent thread is sleeping
+    * because of thread join, wake her up */	 
   if(t->parent !=NULL&& t->parent->flag == true)
-{
+	{
 	t->parent->flag=false;
 	thread_unblock(t->parent);
-}
+	}
+
   intr_disable ();
+ //jjeong
+   /* Remove your childern by force */
    children_remove(t);
+   /* Remove yourself from you parent's children list*/
    remove_from_parent(t);
 
-  list_remove (&t->allelem);
+ list_remove (&t->allelem);
  t->status = THREAD_DYING;
   //list_remove (&thread_current()->allelem);
   //thread_current ()->status = THREAD_DYING;
@@ -662,14 +672,12 @@ init_thread (struct thread *t, const char *name, int priority)
 	   * and put generated thread 
 	   * in to parent thread's child list
 	   */
-//idle????
 	   t-> parent= pt; 
-//sema down
  	   lock_acquire(&pt->list_lock);
   	   list_push_back(&t->parent->children,&t->child_elem);
-//sema up	
 	   lock_release(&pt->list_lock);
 	}
+
   old_level = intr_disable ();
   list_push_back (&all_list, &t->allelem);
   intr_set_level (old_level);

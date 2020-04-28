@@ -109,7 +109,7 @@ struct thread
     struct list_elem child_elem;	/* List element for child list */
     struct thread* parent;		/* Pointer pointing to its parent thread */
     struct lock list_lock;		/* Lock used for modifing childern list */ 
-    struct lock exit_lock;		/* Lock used for modifing childern list */ 
+    struct lock exit_lock;		/* Lock used for checking this thread exit execsion */ 
     int exit;
     bool flag;  			/* flag for block in join situation */
    };
