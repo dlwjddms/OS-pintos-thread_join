@@ -1,0 +1,63 @@
+qemu-system-i386 -device isa-debug-exit -hda /tmp/_y43bR_205.dsk -m 4 -net none -nographic -monitor null
+PiLo hda1
+Loading.........
+Kernel command line: synctest
+Pintos booting with 3,968 kB RAM...
+Using page allocator 0
+512 pages available in kernel pool.
+222 pages available in user pool.
+The total size of thread is: 144 byte The total size of THIS  thread is: 4 byte The tid size of THIS  thread is: 4 byte The status size of THIS  thread is: 4 byte The stack size of THIS  thread is: 4 byte The elem size of THIS  thread is: 8 byte The allelem size of THIS  thread is: 8 byte The magic size of THIS  thread is: 4 byte The priority size of THIS  thread is: 4 byte The name  size of THIS  thread is: 16 byte The wakeup_tick size of THIS  thread is: 8 byte Calibrating timer...  104,755,200 loops/s.
+Boot complete.
+implement synchronize test!!!
+The total size of thread is: 144 byte The total size of THIS  thread is: 4 byte The tid size of THIS  thread is: 4 byte The status size of THIS  thread is: 4 byte The stack size of THIS  thread is: 4 byte The elem size of THIS  thread is: 8 byte The allelem size of THIS  thread is: 8 byte The magic size of THIS  thread is: 4 byte The priority size of THIS  thread is: 4 byte The name  size of THIS  thread is: 16 byte The wakeup_tick size of THIS  thread is: 8 byte The total size of thread is: 144 byte The total size of THIS  thread is: 4 byte The tid size of THIS  thread is: 4 byte The status size of THIS  thread is: 4 byte The stack size of THIS  thread is: 4 byte The elem size of THIS  thread is: 8 byte The allelem size of THIS  thread is: 8 byte The magic size of THIS  thread is: 4 byte The priority size of THIS  thread is: 4 byte The name  size of THIS  thread is: 16 byte The wakeup_tick size of THIS  thread is: 8 byte The total size of thread is: 144 byte The total size of THIS  thread is: 4 byte The tid size of THIS  thread is: 4 byte The status size of THIS  thread is: 4 byte The stack size of THIS  thread is: 4 byte The elem size of THIS  thread is: 8 byte The allelem size of THIS  thread is: 8 byte The magic size of THIS  thread is: 4 byte The priority size of THIS  thread is: 4 byte The name  size of THIS  thread is: 16 byte The wakeup_tick size of THIS  thread is: 8 byte The total size of thread is: 144 byte The total size of THIS  thread is: 4 byte The tid size of THIS  thread is: 4 byte The status size of THIS  thread is: 4 byte The stack size of THIS  thread is: 4 byte The elem size of THIS  thread is: 8 byte The allelem size of THIS  thread is: 8 byte The magic size of THIS  thread is: 4 byte The priority size of THIS  thread is: 4 byte The name  size of THIS  thread is: 16 byte The wakeup_tick size of THIS  thread is: 8 byte 0 is printed by thread name ' test1' 
+0 is printed by thread name ' test2' 
+0 is printed by thread name ' test3' 
+1 is printed by thread name ' test1' 
+1 is printed by thread name ' test2' 
+0 is printed by thread name ' test' 
+1 is printed by thread name ' test3' 
+2 is printed by thread name ' test1' 
+2 is printed by thread name ' test2' 
+1 is printed by thread name ' test' 
+2 is printed by thread name ' test3' 
+3 is printed by thread name ' test1' 
+3 is printed by thread name ' test2' 
+2 is printed by thread name ' test' 
+3 is printed by thread name ' test3' 
+4 is printed by thread name ' test1' 
+4 is printed by thread name ' test2' 
+3 is printed by thread name ' test' 
+4 is printed by thread name ' test3' 
+5 is printed by thread name ' test1' 
+5 is printed by thread name ' test2' 
+4 is printed by thread name ' test' 
+5 is printed by thread name ' test3' 
+6 is printed by thread name ' test1' 
+6 is printed by thread name ' test2' 
+5 is printed by thread name ' test' 
+6 is printed by thread name ' test3' 
+7 is printed by thread name ' test1' 
+7 is printed by thread name ' test2' 
+6 is printed by thread name ' test' 
+7 is printed by thread name ' test3' 
+8 is printed by thread name ' test1' 
+8 is printed by thread name ' test2' 
+7 is printed by thread name ' test' 
+8 is printed by thread name ' test3' 
+9 is printed by thread name ' test1' 
+test1 : test1 
+9 is printed by thread name ' test2' 
+test2 : test2 
+8 is printed by thread name ' test' 
+9 is printed by thread name ' test3' 
+test3 : test3 
+thread named 'test1' is joined !
+thread named 'test2' is joined !
+thread named 'test3' is joined !
+9 is printed by thread name ' test' 
+test : test 
+thread named 'test' is joined !
+ synctest is finished !~! 
+Shutting down ...
+Shutting down ...
+main : main 
